@@ -101,9 +101,9 @@ const LoginForm = () => {
             <div className="text-center">
               <p className="text-sm text-muted-foreground">
                 Don't have an account?{" "}
-                <button className="text-primary hover:text-primary/80 font-medium transition-colors">
+                <a href="/register" className="text-primary hover:text-primary/80 font-medium transition-colors">
                   Create Account
-                </button>
+                </a>
               </p>
             </div>
 
