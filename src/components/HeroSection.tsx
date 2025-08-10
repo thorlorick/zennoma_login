@@ -9,7 +9,7 @@ const HeroSection = () => {
             {/* Logo */}
             <div className="w-full max-w-md mx-auto">
               <img 
-                src="/lovable-uploads/e58ba52c-c425-44b4-9f65-03e490062571.png" 
+                src="/lovable-uploads/015f94e9-5021-43e2-9054-004639b8fb06.png" 
                 alt="Zennoma - Secure. Anonymous. Yours." 
                 className="w-full h-auto mx-auto"
               />
