@@ -7,7 +7,7 @@ const HeroSection = () => {
         {/* Logo positioned top left */}
         <div className="mb-16">
           <img 
-            src="/lovable-uploads/70b52b92-80e1-4d4a-9a29-e2a907503ad9.png" 
+            src="/img/logo.png" 
             alt="Zennoma Logo" 
             className="w-32 h-32 md:w-40 md:h-40"
           />
