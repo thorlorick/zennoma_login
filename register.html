@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zennoma - Secure. Anonymous. Yours.</title>
+    <title>Register - Zennoma</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -31,58 +31,45 @@
         }
     </script>
     <link rel="stylesheet" href="styles.css">
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body class="min-h-screen">
-    <!-- Hero Section -->
-    <section class="min-h-screen bg-gradient-to-br from-secondary to-accent">
-        <div class="container mx-auto px-4 py-8">
-            <!-- Logo positioned top left -->
-            <div class="mb-16">
-                <div class="w-32 h-32 md:w-40 md:h-40 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span class="text-4xl font-bold text-primary">Z</span>
-                </div>
-            </div>
-            
-            <!-- Hero Text -->
-            <div class="flex items-center justify-center min-h-[60vh]">
-                <div class="text-center">
-                    <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold text-foreground mb-8">
-                        Zennoma
-                    </h1>
-                    <p class="text-2xl md:text-4xl font-light text-muted-foreground tracking-wider">
-                        Secure. Anonymous. Yours.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Login Form Section -->
-    <section class="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-background to-secondary/30">
+<body class="min-h-screen bg-gradient-to-br from-background to-secondary/30">
+    <div class="min-h-screen flex items-center justify-center px-4 py-16">
         <div class="w-full max-w-md">
             <div class="card shadow-xl border border-border/50 bg-card/95 backdrop-blur-sm rounded-lg">
-                <!-- Card Header -->
+                <!-- Header -->
                 <div class="p-6 pb-4 space-y-4">
                     <div class="flex justify-center">
                         <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                            <i data-lucide="shield" class="w-6 h-6 text-primary"></i>
+                            <i data-lucide="user-plus" class="w-6 h-6 text-primary"></i>
                         </div>
                     </div>
                     <div class="text-center space-y-2">
-                        <h2 class="text-2xl font-semibold text-foreground">
-                            Welcome Back
-                        </h2>
-                        <p class="text-muted-foreground">
-                            Sign in to your secure account
-                        </p>
+                        <h1 class="text-2xl font-semibold text-foreground">Create Account</h1>
+                        <p class="text-muted-foreground">Join Zennoma for secure, anonymous access</p>
                     </div>
                 </div>
                 
-                <!-- Card Content -->
+                <!-- Content -->
                 <div class="p-6 pt-2 space-y-6">
-                    <form id="loginForm" class="space-y-4">
+                    <form id="registerForm" class="space-y-4">
+                        <!-- Name Field -->
+                        <div class="space-y-2">
+                            <label for="name" class="text-sm font-medium text-foreground">
+                                Full Name
+                            </label>
+                            <div class="relative">
+                                <i data-lucide="user" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground"></i>
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Enter your full name"
+                                    class="w-full pl-10 h-11 px-3 py-2 bg-background/50 border border-border/60 rounded-md focus:border-primary/50 focus:ring-2 focus:ring-primary/20 focus:outline-none"
+                                    required
+                                />
+                            </div>
+                        </div>
+
                         <!-- Email Field -->
                         <div class="space-y-2">
                             <label for="email" class="text-sm font-medium text-foreground">
@@ -110,22 +97,41 @@
                                 <input
                                     id="password"
                                     type="password"
-                                    placeholder="Enter your password"
+                                    placeholder="Create a password"
                                     class="w-full pl-10 h-11 px-3 py-2 bg-background/50 border border-border/60 rounded-md focus:border-primary/50 focus:ring-2 focus:ring-primary/20 focus:outline-none"
                                     required
                                 />
                             </div>
                         </div>
 
-                        <!-- Forgot Password Link -->
-                        <div class="flex justify-end">
-                            <button
-                                type="button"
-                                class="text-sm text-primary hover:text-primary/80 transition-colors"
-                                onclick="alert('Forgot password functionality would be implemented here')"
-                            >
-                                Forgot password?
-                            </button>
+                        <!-- Confirm Password Field -->
+                        <div class="space-y-2">
+                            <label for="confirmPassword" class="text-sm font-medium text-foreground">
+                                Confirm Password
+                            </label>
+                            <div class="relative">
+                                <i data-lucide="lock" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground"></i>
+                                <input
+                                    id="confirmPassword"
+                                    type="password"
+                                    placeholder="Confirm your password"
+                                    class="w-full pl-10 h-11 px-3 py-2 bg-background/50 border border-border/60 rounded-md focus:border-primary/50 focus:ring-2 focus:ring-primary/20 focus:outline-none"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Terms Checkbox -->
+                        <div class="flex items-center space-x-2">
+                            <input
+                                id="terms"
+                                type="checkbox"
+                                class="w-4 h-4 text-primary bg-background border-border rounded focus:ring-primary/20 focus:ring-2"
+                                required
+                            />
+                            <label for="terms" class="text-sm text-muted-foreground">
+                                I agree to the <a href="#" class="text-primary hover:text-primary/80">Terms of Service</a> and <a href="#" class="text-primary hover:text-primary/80">Privacy Policy</a>
+                            </label>
                         </div>
 
                         <!-- Submit Button -->
@@ -133,7 +139,7 @@
                             type="submit" 
                             class="w-full h-11 bg-primary hover:bg-primary/90 text-primary-foreground font-medium transition-all duration-200 shadow-md hover:shadow-lg rounded-md"
                         >
-                            Sign In Securely
+                            Create Account
                         </button>
                     </form>
 
@@ -147,27 +153,19 @@
                     <!-- Footer -->
                     <div class="text-center">
                         <p class="text-sm text-muted-foreground">
-                            Don't have an account?
-                            <a href="register.html" class="text-primary hover:text-primary/80 font-medium transition-colors ml-1">
-                                Create Account
+                            Already have an account?
+                            <a href="index.html" class="text-primary hover:text-primary/80 font-medium transition-colors ml-1">
+                                Sign In
                             </a>
-                        </p>
-                    </div>
-
-                    <!-- Security Notice -->
-                    <div class="bg-accent/30 p-3 rounded-lg border border-accent/50">
-                        <p class="text-xs text-center text-muted-foreground">
-                            🔒 Your connection is secured with end-to-end encryption
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="register.js"></script>
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
     </script>
 </body>
